@@ -1,26 +1,53 @@
 <!doctype html>
 <html lang="pt-PT">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Obra Lisboa — Pré-visualização</title>
-    <style>
-      :root { color-scheme: dark; font-family: Arial, Helvetica, sans-serif; }
-      * { box-sizing: border-box; }
-      body { margin: 0; min-height: 100vh; background: #070707; color: #fff; display: grid; place-items: center; padding: 24px; }
-      main { width: min(100%, 720px); }
-      p { color: #cfff45; font-size: 12px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; margin: 0 0 12px; }
-      h1 { font-size: clamp(28px, 7vw, 52px); margin: 0 0 24px; line-height: 1; }
-      img { display: block; width: 100%; border: 1px solid #ffffff; }
-      footer { color: #a4a4a4; font-size: 14px; margin-top: 16px; }
-    </style>
-  </head>
-  <body>
-    <main>
-      <p>Pré-visualização temporária</p>
-      <h1>INSTALAÇÕES DE CASA DE BANHO</h1>
-      <img src="exemplo-instalacoes-banho.png" alt="Esquema ilustrado de uma casa de banho e instalações" />
-      <footer>Exemplo de formato educativo · Obra Lisboa</footer>
-    </main>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Obra Lisboa — 30 publicações</title>
+  <style>
+    :root { font-family: Arial, Helvetica, sans-serif; color-scheme: dark; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #070707; color: #fff; }
+    header, main { max-width: 1440px; margin: auto; padding-left: 24px; padding-right: 24px; }
+    header { padding-top: 48px; padding-bottom: 28px; }
+    .eyebrow { color: #cfff45; font-size: 12px; font-weight: 700; letter-spacing: .14em; margin: 0 0 12px; text-transform: uppercase; }
+    h1 { font-size: clamp(38px, 7vw, 76px); line-height: .94; margin: 0; letter-spacing: -.06em; }
+    .intro { color: #cfcfcf; font-size: 17px; line-height: 1.5; max-width: 650px; margin: 22px 0 0; }
+    .key { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+    .key span { border: 1px solid #404040; padding: 7px 10px; font-size: 12px; border-radius: 100px; }
+    .key span:first-child { border-color: #cfff45; color: #cfff45; }
+    main { padding-bottom: 56px; }
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    article { background: #111; min-width: 0; }
+    img { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; }
+    .meta { padding: 12px 13px 14px; }
+    .number { color: #cfff45; font-size: 12px; font-weight: 700; letter-spacing: .08em; }
+    .type { color: #aaa; font-size: 13px; margin-top: 4px; }
+    @media (max-width: 760px) { header, main { padding-left: 16px; padding-right: 16px; } header { padding-top: 32px; padding-bottom: 22px; } main { padding-bottom: 36px; } .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; } .meta { padding: 9px; } .type { font-size: 11px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="eyebrow">Pré-visualização temporária · Obra Lisboa</p>
+    <h1>30 PUBLICAÇÕES</h1>
+    <p class="intro">Grelha Editorial Precision: 10 dias, três publicações por dia — obras reais, guias práticos e design de interiores.</p>
+    <div class="key"><span>Obras nossas</span><span>Curiosidade / how-to</span><span>Design de interiores</span></div>
+  </header>
+  <main><section class="grid" id="grid" aria-label="Grelha de 30 publicações"></section></main>
+  <script>
+    const posts = [
+      ['01-obras-santos-guarda-mor.png','08:15','Obras nossas'], ['02-guia-antes-de-demolir.png','12:30','Curiosidade / how-to'], ['03-interiores-cozinha-com-intencao.png','19:15','Design de interiores'],
+      ['04-obras-praca-das-flores.png','08:15','Obras nossas'], ['05-guia-orçamento-realista.png','12:30','Curiosidade / how-to'], ['06-interiores-escadas-com-ritmo.png','19:15','Design de interiores'],
+      ['07-obras-campo-pequeno.png','08:15','Obras nossas'], ['08-guia-licencas.png','12:30','Curiosidade / how-to'], ['09-interiores-cor-com-criterio.png','19:15','Design de interiores'],
+      ['10-obras-24-de-julho.png','08:15','Obras nossas'], ['11-guia-sequencia-de-obra.png','12:30','Curiosidade / how-to'], ['12-interiores-texturas-que-duram.png','19:15','Design de interiores'],
+      ['13-obras-amoreiras.png','08:15','Obras nossas'], ['14-guia-humidade.png','12:30','Curiosidade / how-to'], ['15-interiores-arrumacao-invisivel.png','19:15','Design de interiores'],
+      ['16-obras-carnaxide.png','08:15','Obras nossas'], ['17-guia-eletricidade.png','12:30','Curiosidade / how-to'], ['18-interiores-luz-em-camadas.png','19:15','Design de interiores'],
+      ['19-obras-golden-goose.png','08:15','Obras nossas'], ['20-guia-isolamento.png','12:30','Curiosidade / how-to'], ['21-interiores-madeira-com-presenca.png','19:15','Design de interiores'],
+      ['22-obras-graca.png','08:15','Obras nossas'], ['23-guia-cozinha-planeamento.png','12:30','Curiosidade / how-to'], ['24-interiores-espacos-com-caracter.png','19:15','Design de interiores'],
+      ['25-obras-rua-do-barao.png','08:15','Obras nossas'], ['26-guia-casa-de-banho.png','12:30','Curiosidade / how-to'], ['27-interiores-pequeno-mas-amplo.png','19:15','Design de interiores'],
+      ['28-obras-santos-detalhe.png','08:15','Obras nossas'], ['29-guia-escolher-equipa.png','12:30','Curiosidade / how-to'], ['30-interiores-detalhe-final.png','19:15','Design de interiores']
+    ];
+    document.querySelector('#grid').innerHTML = posts.map((post, index) => `<article><img loading="lazy" src="${post[0]}" alt="Publicação ${index + 1}" /><div class="meta"><div class="number">${String(index + 1).padStart(2,'0')} · ${post[1]}</div><div class="type">${post[2]}</div></div></article>`).join('');
+  </script>
+</body>
 </html>
