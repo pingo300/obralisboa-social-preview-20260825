@@ -36,16 +36,16 @@
   <main><section class="grid" id="grid" aria-label="Grelha de 30 publicações"></section></main>
   <script>
     const posts = [
-      ['01-obras-santos-guarda-mor.png','08:15','Projetos'], ['02-guia-antes-de-demolir.png','12:30','Curiosidade / how-to'], ['03-interiores-cozinha-com-intencao.png','19:15','Design de interiores'],
-      ['04-obras-praca-das-flores.png','08:15','Projetos'], ['05-guia-orçamento-realista.png','12:30','Curiosidade / how-to'], ['06-interiores-escadas-com-ritmo.png','19:15','Design de interiores'],
-      ['07-obras-campo-pequeno.png','08:15','Projetos'], ['08-guia-licencas.png','12:30','Curiosidade / how-to'], ['09-interiores-cor-com-criterio.png','19:15','Design de interiores'],
-      ['10-obras-24-de-julho.png','08:15','Projetos'], ['11-guia-sequencia-de-obra.png','12:30','Curiosidade / how-to'], ['12-interiores-texturas-que-duram.png','19:15','Design de interiores'],
-      ['13-obras-amoreiras.png','08:15','Projetos'], ['14-guia-humidade.png','12:30','Curiosidade / how-to'], ['15-interiores-arrumacao-invisivel.png','19:15','Design de interiores'],
-      ['16-obras-carnaxide.png','08:15','Projetos'], ['17-guia-eletricidade.png','12:30','Curiosidade / how-to'], ['18-interiores-luz-em-camadas.png','19:15','Design de interiores'],
-      ['19-obras-golden-goose.png','08:15','Projetos'], ['20-guia-isolamento.png','12:30','Curiosidade / how-to'], ['21-interiores-madeira-com-presenca.png','19:15','Design de interiores'],
-      ['22-obras-graca.png','08:15','Projetos'], ['23-guia-cozinha-planeamento.png','12:30','Curiosidade / how-to'], ['24-interiores-espacos-com-caracter.png','19:15','Design de interiores'],
-      ['25-obras-rua-do-barao.png','08:15','Projetos'], ['26-guia-casa-de-banho.png','12:30','Curiosidade / how-to'], ['27-interiores-pequeno-mas-amplo.png','19:15','Design de interiores'],
-      ['28-obras-santos-detalhe.png','08:15','Projetos'], ['29-guia-escolher-equipa.png','12:30','Curiosidade / how-to'], ['30-interiores-detalhe-final.png','19:15','Design de interiores']
+      ['01-obras-santos-guarda-mor.png','08:15','Projetos'], ['02-guia-antes-de-demolir.png','12:30','Curiosidade / how-to'], ['interior-sala-lisboa-01.png','19:15','Design de interiores'],
+      ['04-obras-praca-das-flores.png','08:15','Projetos'], ['05-guia-orçamento-realista.png','12:30','Curiosidade / how-to'], ['interior-cozinha-02.png','19:15','Design de interiores'],
+      ['07-obras-campo-pequeno.png','08:15','Projetos'], ['08-guia-licencas.png','12:30','Curiosidade / how-to'], ['interior-quarto-03.png','19:15','Design de interiores'],
+      ['10-obras-24-de-julho.png','08:15','Projetos'], ['11-guia-sequencia-de-obra.png','12:30','Curiosidade / how-to'], ['interior-banho-04.png','19:15','Design de interiores'],
+      ['13-obras-amoreiras.png','08:15','Projetos'], ['14-guia-humidade.png','12:30','Curiosidade / how-to'], ['interior-sala-jantar-05.png','19:15','Design de interiores'],
+      ['16-obras-carnaxide.png','08:15','Projetos'], ['17-guia-eletricidade.png','12:30','Curiosidade / how-to'], ['interior-entrada-06.png','19:15','Design de interiores'],
+      ['19-obras-golden-goose.png','08:15','Projetos'], ['20-guia-isolamento.png','12:30','Curiosidade / how-to'], ['interior-escritorio-07.png','19:15','Design de interiores'],
+      ['22-obras-graca.png','08:15','Projetos'], ['23-guia-cozinha-planeamento.png','12:30','Curiosidade / how-to'], ['interior-arrumacao-08.png','19:15','Design de interiores'],
+      ['25-obras-rua-do-barao.png','08:15','Projetos'], ['26-guia-casa-de-banho.png','12:30','Curiosidade / how-to'], ['interior-leitura-09.png','19:15','Design de interiores'],
+      ['28-obras-santos-detalhe.png','08:15','Projetos'], ['29-guia-escolher-equipa.png','12:30','Curiosidade / how-to'], ['interior-carpintaria-10.png','19:15','Design de interiores']
     ];
     document.querySelector('#grid').innerHTML = posts.map((post, index) => `<article><img loading="lazy" src="${post[0]}" alt="Publicação ${index + 1}" /><div class="meta"><div class="number">${String(index + 1).padStart(2,'0')} · ${post[1]}</div><div class="type">${post[2]}</div></div></article>`).join('');
   </script>
