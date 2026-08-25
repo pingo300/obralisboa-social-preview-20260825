@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Obra Lisboa — Guias em carrossel</title>
+  <style>
+    :root { font-family: Arial, Helvetica, sans-serif; color-scheme: dark; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background:#070707; color:#fff; }
+    header, main { max-width: 1440px; margin:auto; padding-left:24px; padding-right:24px; }
+    header { padding-top:48px; padding-bottom:28px; }
+    .eyebrow { color:#cfff45; font-size:12px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; }
+    h1 { font-size:clamp(38px,7vw,76px); line-height:.94; letter-spacing:-.06em; margin:14px 0; }
+    .intro { max-width:680px; color:#cacaca; line-height:1.5; font-size:17px; }
+    .guide { margin:0 0 58px; }
+    h2 { font-size:24px; margin:0 0 16px; color:#cfff45; }
+    .slides { display:flex; gap:12px; overflow-x:auto; padding-bottom:10px; scroll-snap-type:x mandatory; }
+    .slides img { width:min(67vw,340px); aspect-ratio:1; object-fit:cover; flex:0 0 auto; scroll-snap-align:start; background:#151515; }
+    .note { color:#aaa; font-size:13px; margin-top:8px; }
+    @media (min-width:1100px) { .slides img { width:250px; } }
+    @media (max-width:760px) { header,main{padding-left:16px;padding-right:16px} header{padding-top:32px} .guide{margin-bottom:38px} }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="eyebrow">Pré-visualização temporária · Obra Lisboa</div>
+    <h1>10 GUIAS EM CARROSSEL</h1>
+    <p class="intro">Cada tema segue cinco momentos: gancho, erro comum, o que verificar, sequência recomendada e decisão prática.</p>
+  </header>
+  <main id="guides"></main>
+  <script>
+    const guides = [
+      ['orcamento-sem-surpresas','Orçamento sem surpresas'],
+      ['humidade-encontrar-causa','Humidade: encontrar a causa'],
+      ['banho-invisivel','Casa de banho: o invisível'],
+      ['janelas-conforto','Janelas e conforto'],
+      ['antes-demolir','Antes de demolir'],
+      ['eletricidade-rotina','Eletricidade para a rotina'],
+      ['cozinha-funciona','Cozinha que funciona'],
+      ['obras-em-fracao','Obras em fração'],
+      ['escolher-equipa','Escolher a equipa'],
+      ['entrega-obra','Entrega de obra']
+    ];
+    const kinds = ['cover','mistake','check','sequence','action'];
+    document.querySelector('#guides').innerHTML = guides.map(function(guide) {
+      const slug = guide[0], title = guide[1];
+      const slides = kinds.map(function(kind,index) {
+        return '<img loading="lazy" src="carrosseis/' + String(index+1).padStart(2,'0') + '-' + slug + '-' + kind + '.png" alt="' + title + ' — slide ' + (index+1) + ' de 5">';
+      }).join('');
+      return '<section class="guide"><h2>' + title + '</h2><div class="slides">' + slides + '</div><div class="note">Deslize para ver os 5 slides.</div></section>';
+    }).join('');
+  </script>
+</body>
+</html>
