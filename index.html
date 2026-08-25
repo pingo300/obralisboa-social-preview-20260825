@@ -30,22 +30,22 @@
   <header>
     <p class="eyebrow">Pré-visualização temporária · Obra Lisboa</p>
     <h1>30 PUBLICAÇÕES</h1>
-    <p class="intro">Grelha Editorial Precision: 10 dias, três publicações por dia — projetos, guias práticos e design de interiores.</p>
+    <p class="intro">Grelha de produção: 10 dias, três publicações por dia — projetos reais, guias práticos e design de interiores.</p>
     <div class="key"><span>Projetos</span><span>Curiosidade / how-to</span><span>Design de interiores</span></div>
   </header>
   <main><section class="grid" id="grid" aria-label="Grelha de 30 publicações"></section></main>
   <script>
     const posts = [
-      ['01-obras-santos-guarda-mor.png','08:15','Projetos'], ['02-guia-antes-de-demolir.png','12:30','Curiosidade / how-to'], ['interior-sala-lisboa-01.png','19:15','Design de interiores'],
-      ['04-obras-praca-das-flores.png','08:15','Projetos'], ['05-guia-orçamento-realista.png','12:30','Curiosidade / how-to'], ['interior-cozinha-02.png','19:15','Design de interiores'],
-      ['07-obras-campo-pequeno.png','08:15','Projetos'], ['08-guia-licencas.png','12:30','Curiosidade / how-to'], ['interior-quarto-03.png','19:15','Design de interiores'],
-      ['10-obras-24-de-julho.png','08:15','Projetos'], ['11-guia-sequencia-de-obra.png','12:30','Curiosidade / how-to'], ['interior-banho-04.png','19:15','Design de interiores'],
-      ['13-obras-amoreiras.png','08:15','Projetos'], ['14-guia-humidade.png','12:30','Curiosidade / how-to'], ['interior-sala-jantar-05.png','19:15','Design de interiores'],
-      ['16-obras-carnaxide.png','08:15','Projetos'], ['17-guia-eletricidade.png','12:30','Curiosidade / how-to'], ['interior-entrada-06.png','19:15','Design de interiores'],
-      ['19-obras-golden-goose.png','08:15','Projetos'], ['20-guia-isolamento.png','12:30','Curiosidade / how-to'], ['interior-escritorio-07.png','19:15','Design de interiores'],
-      ['22-obras-graca.png','08:15','Projetos'], ['23-guia-cozinha-planeamento.png','12:30','Curiosidade / how-to'], ['interior-arrumacao-08.png','19:15','Design de interiores'],
-      ['25-obras-rua-do-barao.png','08:15','Projetos'], ['26-guia-casa-de-banho.png','12:30','Curiosidade / how-to'], ['interior-leitura-09.png','19:15','Design de interiores'],
-      ['28-obras-santos-detalhe.png','08:15','Projetos'], ['29-guia-escolher-equipa.png','12:30','Curiosidade / how-to'], ['interior-carpintaria-10.png','19:15','Design de interiores']
+      ['01-obras-santos-guarda-mor.png','08:15','Projetos'], ['02-guia-orcamento-sem-surpresas.png','12:30','Guia prático'], ['03-interiores-luz-madeira-proporcao.png','19:15','Design de interiores'],
+      ['04-obras-praca-das-flores.png','08:15','Projetos'], ['05-guia-humidade-encontrar-causa.png','12:30','Guia prático'], ['06-interiores-cozinha-envelhece-bem.png','19:15','Design de interiores'],
+      ['07-obras-campo-pequeno.png','08:15','Projetos'], ['08-guia-banho-invisivel.png','12:30','Guia prático'], ['09-interiores-arrumacao-desaparece.png','19:15','Design de interiores'],
+      ['10-obras-24-de-julho.png','08:15','Projetos'], ['11-guia-janelas-conforto.png','12:30','Guia prático'], ['12-interiores-banho-silencioso.png','19:15','Design de interiores'],
+      ['13-obras-amoreiras.png','08:15','Projetos'], ['14-guia-antes-demolir.png','12:30','Guia prático'], ['15-interiores-pequeno-mas-amplo.png','19:15','Design de interiores'],
+      ['16-obras-carnaxide.png','08:15','Projetos'], ['17-guia-eletricidade-rotina.png','12:30','Guia prático'], ['18-interiores-casa-comeca-entrada.png','19:15','Design de interiores'],
+      ['19-obras-golden-goose.png','08:15','Projetos'], ['20-guia-cozinha-funciona.png','12:30','Guia prático'], ['21-interiores-espaco-concentrar.png','19:15','Design de interiores'],
+      ['22-obras-graca.png','08:15','Projetos'], ['23-guia-obras-em-fracao.png','12:30','Guia prático'], ['24-interiores-arrumacao-sem-ruido.png','19:15','Design de interiores'],
+      ['25-obras-rua-do-barao.png','08:15','Projetos'], ['26-guia-escolher-equipa.png','12:30','Guia prático'], ['27-interiores-canto-desligar.png','19:15','Design de interiores'],
+      ['28-obras-santos-detalhe.png','08:15','Projetos'], ['29-guia-entrega-obra.png','12:30','Guia prático'], ['30-interiores-carpintaria-organiza.png','19:15','Design de interiores']
     ];
     document.querySelector('#grid').innerHTML = posts.map((post, index) => `<article><img loading="lazy" src="${post[0]}" alt="Publicação ${index + 1}" /><div class="meta"><div class="number">${String(index + 1).padStart(2,'0')} · ${post[1]}</div><div class="type">${post[2]}</div></div></article>`).join('');
   </script>
